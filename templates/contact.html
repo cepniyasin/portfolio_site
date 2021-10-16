@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content0 %}
+<link rel="stylesheet" href="{% static 'assets/css/projectstyles.css' %}" />
+{% endblock %}
+
+<p></p>
+
+{% block content1 %}
+
+<section class="hero" id="about">
+      <img
+        src="{% static 'assets/images/contact.png' %}"
+        alt="contact"
+        loading="lazy"
+        class="hero-img"
+      />
+      <div class="bio animate__animated animate__shakeX">
+        <h2 class="bio-title">How nice you want to contact me!</h2>
+        <p class="bio-text"> Please feel free to use the form below and I will return to you
+            in a few coffee break time. :)
+        </p>
+          <p>Looking forward to hearing from you!</p>
+      </div>
+</section>
+
+{% endblock %}

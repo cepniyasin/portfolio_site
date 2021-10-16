@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+          {% block content0 %}
+<link rel="stylesheet" href="{% static 'assets/css/projectstyles.css' %}" />
+          {% endblock %}
+
+{% block content1 %}
+
+ <section class="more-about">
+
+      <div class="st-project-container">
+      <h2>{{ object.Title }}</h2>
+        <div class="st-project-container st-project-card">
+            <img
+          src="{% static 'assets/images/' %}{{ object.DetailViewImage }}"
+          alt="{{ object.Title }} image"
+         loading="lazy">
+         <h1>{% if object.Section_Title_1 %}{{ object.Section_Title_1 }}{% else %}{{ object.Title }}{% endif %}</h1>
+         <p>{% if object.Description %}{{ object.Description }}{% else %} Coming Soon {% endif %}</p>
+
+           {% if object.DetailViewImage_2 %}
+            <img
+          src="{% static 'assets/images/' %}{{ object.DetailViewImage_2 }}"
+          alt="{% if object.Title_2 %}{{ object.Description }}{% else %} image {% endif %}"
+         loading="lazy">
+            {% endif %}
+         <h1>{% if object.Section_Title_2 %}{{ object.Section_Title_2 }}{% endif %}</h1>
+         <p>{% if object.Description_2 %}{{ object.Description_2 }}{% endif %}</p>
+
+           {% if object.DetailViewImage_3 %}
+            <img
+          src="{% static 'assets/images/' %}{{ object.DetailViewImage_3 }}"
+          alt="{% if object.Title_3 %}{{ object.Description }}{% else %} image {% endif %}"
+         loading="lazy">
+            {% endif %}
+         <h1>{% if object.Section_Title_3 %}{{ object.Section_Title_3 }}{% endif %}</h1>
+         <p>{% if object.Description_3 %}{{ object.Description_3 }}{% endif %}</p>
+             <p>{% if object.URL %}Feel free to <a href="{{ object.URL }}" class="nav-link"> click here </a>
+                 and check how it works!{% else %}
+                 A download link for the project will be added here soon! {% endif %}</p>
+        </div>
+      </div>
+      </section>
+
+{% include 'gazver_worker.html' %}
+
+{% include 'skills.html' %}
+
+<!--{% include 'recent_projects.html' %}-->
+
+
+{% endblock %}

@@ -1,0 +1,47 @@
+  {% load static %}
+
+
+                 <section class="projects" id="projects">
+      <h2 class="projects-title">Some of my Recent Projects</h2>
+      <div class="projects-container">
+        <div class="project-container project-card">
+          <img
+            src="{% static 'assets/images/LearnWords.JPG' %}"
+            alt="expense-tracker"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">LearnWords App</h3>
+          <p class="project-details">
+            A dictionary with subsequent flashcards app that I created to help myself learning Swedish. The app is based on Python and the GUI is desingned with Tkinter package.
+          </p>
+          <a href="projects/LearnWordsApp.html" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+          <img
+            src="{% static 'assets/images/transportNet/transportLAAmini.jpeg' %}"
+            alt="Transport Network Project"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Transport Network Project</h3>
+          <p class="project-details">
+            A transport network project on the subject area of Gothenburg city. The project includes a Service Area Analysis and Location Allocation Analysis respectively.
+          </p>
+          <a href="projects/TransportNet.html" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+          <img
+            src="{% static 'assets/images/BlackJ.JPG' %}"
+            alt="netflic-clone"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">BlackJack</h3>
+          <p class="project-details">
+            A simple JavaScript based programming project for one of the classic casino game Blackjack. The project represents some of my current skills in JS programming.
+          </p>
+          <a href="projects/blackjack.html" class="project-link">Check it Out</a>
+        </div>
+      </div>
+    </section>

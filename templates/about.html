@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content0 %}
+<link rel="stylesheet" href="{% static 'assets/css/projectstyles.css' %}" />
+{% endblock %}
+
+<p></p>
+
+{% block content1 %}
+
+<section class="hero" id="about">
+             <img
+        src="{% static 'assets/images/about.png' %}"
+        alt="contact"
+        loading="lazy"
+        class="hero-img"
+      />
+      <div class="bio animate__animated animate__shakeX">
+        <h2 class="bio-title">Who is this and what does he do?</h2>
+        <p class="bio-text">
+
+        </p>
+      </div>
+</section>
+
+<section class="more-about">
+     <div class="st-project-container">
+         <div class="st-project-container st-project-card">
+
+<p>    It is Yasin and I am living in Umeå/Sweden. I have 2 master’s degrees from
+    Umeå University in the Human Geography department. The first one is specialized in Tourism while the second one is
+    in Geographical Information Systems (GIS). I have a bachelor’s degree from Istanbul University’s Faculty of Economics
+    Tourism Management program. I have also my high school degree from a vocational high school of hotel management and
+    tourism which is the first of its kind in Turkey.</p>
+<p>My work experience in the tourism industry exceeds 10 years. My last 2 jobs (bartender and flight attendant) cover 6
+    years in total and both full-time. During my high school and earlier university years, I have done internships at a
+    hotel and an airline company office, and worked part-time at several MICE tourism and cruise ship travel agencies.
+    In those years, I learned to work in groups effectively, took responsibility during stressful operations, set
+    schedules, hired part-time staff, trained new team members and developed my skills in hostmanship. Consequently, I
+    gathered experiences from diverse aspects of local and international tourism, and I would like to have the chance to
+    utilize them in academic avenues.</p>
+<p>Some of the qualities my studies equipped me includes applying advanced spatial analysis along with the knowledge of
+    cartographic convention for a representation on a map form; post-processing by using Adobe Photoshop; collecting
+    data in various forms and processing to use in GIS; building and modifying custom tools by using Model Builder;
+    creating, processing, and analysing 3D data; and creating, modifying and analysing transport networks. I can also
+    work with the Python programming language both in the GIS context and in general. Due to the context of the majority
+    of my assignments at school, I am familiar with Swedish data sources and language. Besides the studies, I gave
+    cartographic support to a PhD study (Safe Step Project) which had contacted our program coordinator for a freelance
+    service from a student.</p>
+<p>Currently, I am working on my programming skills for using GIS more precisely and effectively, and to be able to
+    automize repetitive tasks in general. I am planning to learn working with APIs, big data and AI as well. I am also
+    working on my language skills in Swedish.</p>
+             <img
+        src="{% static 'assets/images/about2.png' %}"
+        alt="contact"
+        loading="lazy"
+        class="hero-img"
+      />
+         </div>
+     </div>
+</section>
+
+{% endblock %}

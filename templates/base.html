@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS Styles -->
+
+          {% block content0 %}
+
+      Add CSS file
+
+          {% endblock %}
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'assets/icons/globe-apple-touch-icon.png' %}"/>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'assets/icons/favicon2.png' %}"/>
+
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>  Yasin Cepnioglu | GIS Developer</title>
+  </head>
+<body>
+
+    {% include 'navbar.html' %}
+
+    {% block content1 %}
+        replace me
+
+    {% endblock %}
+
+
+
+{% include 'socials.html' %}
+
+{% include 'contact_form.html' %}
+
+{% include 'footer.html' %}
+
+    <!-- scrool section -->
+
+      <i class="scroll-up" id="scroll-up"
+      ><img
+        src="{% static 'assets/icons/icons8-upward-arrow.gif' %}"
+        class="socicon up-arrow"
+        alt="scroll-up"
+      /></i>
+
+    <!-- Website scripts -->
+    <script src="{% static 'assets/js/app.js' %}"></script>
+
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    </body>
+</html>

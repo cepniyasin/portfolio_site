@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+          {% block content0 %}
+<link rel="stylesheet" href="{% static 'assets/css/projectstyles.css' %}" />
+
+{% endblock %}
+
+{% block content1 %}
+
+   <section class="projects" id="projects">
+      <h2 class="projects-title">Completed Projects</h2>
+       <div class="projects-list-container">
+{% for instance in object_list %}
+<!--    <p>{{ instance.id }} -  {{instance.title}}</p>-->
+<!--       <p>{{ instance.id }} - <a href='{{ instance.get_absolute_url1}}'>{{instance.title}}</a></p>-->
+
+        <div class="project-container project-card">
+          <img
+            src="{% static 'assets/images/' %}{{ instance.Logo }}"
+            alt="{{instance.Title}}"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title"> {{instance.Title}}</h3>
+            <p class="project-details"> {{ instance.Summary }} </p>
+<!--            <p class="project-details"> {{ instance.summary }} </p>-->
+
+          <a href='{{ instance.get_absolute_urlHTML}}' class="project-link">Check it Out</a>
+        </div>
+
+       {% endfor %}
+        </div>
+   </section>
+{% include 'gazver_worker.html' %}
+
+{% include 'skills.html' %}
+
+<!--{% include 'recent_projects.html' %}-->
+
+{% endblock %}
+

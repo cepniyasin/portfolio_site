@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content0 %}
+
+<link rel="stylesheet" href="{% static 'assets/css/projectstyles.css' %}" />
+
+{% endblock %}
+
+{% block content1 %}
+
+                <section class="projects" id="projects">
+
+<!--                  <h2 class="projects-title">My Projects</h2>-->
+
+      <div class="projects-container">
+        <div class="project-container category-card">
+         <a a href="/Python_projects" class="project-link"> <img
+            src="{% static 'assets/icons/icons8-python.svg' %}"
+            alt="Python"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Python Projects</h3></a>
+
+        </div>
+
+
+        <div class="project-container category-card">
+          <a href="/GISprojects" class="project-link"> <img
+            src="{% static 'assets/icons/globe.png' %}"
+            alt="GIS"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">GIS Projects</h3></a>
+
+        </div>
+
+
+        <div class="project-container category-card">
+         <a href="/JSprojects" class="project-link"> <img
+            src="{% static 'assets/icons/icons8-javascript.svg' %}"
+            alt="JavaScript, HTML and CSS"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">JavaScrips Projects</h3></a>
+        </div>
+      </div>
+    </section>
+
+{% include 'gazver_worker.html' %}
+
+{% include 'skills.html' %}
+
+
+{% endblock %}

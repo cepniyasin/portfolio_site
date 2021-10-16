@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content0 %}
+<link rel="stylesheet" href="{% static 'assets/css/projectstyles.css' %}" />
+{% endblock %}
+
+
+
+{% block content1 %}
+
+<!-- Project Content -->
+      <section class="more-about">
+      <h2>Blackjack Game</h2>
+      <div class="bj-project-container">
+        <div class="bj-project-container bj-project-card">
+            <div class="bj-project-container bj-project-card bjshadow">
+            <h1 id="bjheading">BlackJack</h1>
+            <p id="bet-message-el">How much do you bet?</p>
+            <p id="bet-el">5$</p>
+            <button id="increase_btn" onclick="increase()">Higher</button>
+            <button id="decrease_btn" onclick="decrease()">Lower</button>
+            <p></p>
+            <button id="start_btn" onclick="start()">Start The Game</button>
+            <p id="message-el">Do you wanna play?</p>
+            <p id="card-el">Player's Cards:</p>
+            <p id="sum-el">Sum:</p>
+            <p id="dealercard-el">Dealer's Cards:</p>
+            <p id="dealersum-el">Sum:</p>
+            <button id="hold" onclick="dealer()">Hold</button>
+            <button id="new-card" onclick="new_card()">Call</button>
+            <p id="player-el">Player Name: </p>
+            <p id="chips-el">Chips: </p>
+            <p id="result"></p>
+          </div>
+            </div>
+      </div>
+      </section>
+
+{% endblock %}
+

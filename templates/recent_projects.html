@@ -1,0 +1,77 @@
+  {% load static %}
+
+
+                 <section class="projects" id="projects">
+      <h2 class="projects-title">Some of my Recent Projects</h2>
+      <div class="projects-container">
+              <div class="projects-list-container">
+
+                                    <!--Featured Projects GIS-->
+
+                  {% for instance in gis.object_list %}
+                  {% if instance.Featured == True %}
+
+        <div class="project-container project-card">
+          <img
+            src="{% static 'assets/images/' %}{{ instance.Logo }}"
+            alt="{{instance.Title}}"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title"> {{instance.Title}}</h3>
+            <p class="project-details"> {{ instance.Summary }} </p>
+<!--            <p class="project-details"> {{ instance.summary }} </p>-->
+
+          <a href='{{ instance.get_absolute_urlHTML}}' class="project-link">Check it Out</a>
+        </div>
+
+                  {% endif %}
+       {% endfor %}
+
+                                    <!--Featured Projects Python-->
+
+                  {% for instance in python.object_list %}
+                  {% if instance.Featured == True %}
+
+        <div class="project-container project-card">
+          <img
+            src="{% static 'assets/images/' %}{{ instance.Logo }}"
+            alt="{{instance.Title}}"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title"> {{instance.Title}}</h3>
+            <p class="project-details"> {{ instance.Summary }} </p>
+<!--            <p class="project-details"> {{ instance.summary }} </p>-->
+
+          <a href='{{ instance.get_absolute_urlHTML}}' class="project-link">Check it Out</a>
+        </div>
+
+                  {% endif %}
+       {% endfor %}
+
+                                    <!--Featured Projects JS-->
+
+                  {% for instance in js.object_list %}
+                  {% if instance.Featured == True %}
+
+        <div class="project-container project-card">
+          <img
+            src="{% static 'assets/images/' %}{{ instance.Logo }}"
+            alt="{{instance.Title}}"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title"> {{instance.Title}}</h3>
+            <p class="project-details"> {{ instance.Summary }} </p>
+<!--            <p class="project-details"> {{ instance.summary }} </p>-->
+
+          <a href='{{ instance.get_absolute_urlHTML}}' class="project-link">Check it Out</a>
+        </div>
+
+                  {% endif %}
+       {% endfor %}
+
+        </div>
+      </div>
+    </section>

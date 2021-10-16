@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content0 %}
+<link rel="stylesheet" href="{% static 'assets/css/homepagestyles.css' %}" />
+
+{% endblock %}
+
+
+
+{% block content1 %}
+
+
+<!--    <h1>Home page</h1>
+    {{ request.user }}
+
+    <p> This is a template</p>-->
+
+
+{% include 'gazver.html' %}
+
+{% include 'moreabout.html' %}
+
+{% include 'skills.html' %}
+
+{% include 'recent_projects.html' %}
+
+{% endblock %}
+
